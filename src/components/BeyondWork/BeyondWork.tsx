@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import { Music2, Gamepad2, Trophy } from 'lucide-react';
 import Section from '../Section';
 import SectionTitle from '../common/SectionTitle';
@@ -13,12 +11,12 @@ const BeyondWork = () => {
       description: "Creating electronic music and ambient soundscapes in my home studio",
       link: {
         text: "Listen on SoundCloud",
-        url: "https://soundcloud.com/your-profile"
+        url: "https://soundcloud.com/frq_frk"
       },
       details: [
-        "Produced 10+ original tracks",
-        "Specialized in ambient and electronic genres",
-        "Home studio setup with professional equipment"
+        "Produced few original tracks",
+        "Specialized in electronic genres and vocals",
+        "Inclined more into Independent Music"
       ]
     },
     {
@@ -27,26 +25,26 @@ const BeyondWork = () => {
       description: "Strategic player with a passion for chess theory and competitive matches",
       link: {
         text: "View Chess.com Profile",
-        url: "https://chess.com/member/your-profile"
+        url: "https://www.chess.com/member/frq_frk"
       },
       details: [
-        "1800+ ELO rating",
-        "Participated in local tournaments",
+        "1200+ ELO rating",
+        "Participated in few online tournaments",
         "Regular online competitor"
       ]
     },
     {
-      title: "Cricket",
+      title: "Story teller",
       icon: <Trophy size={24} />,
-      description: "Active cricket player and enthusiast with experience in local leagues",
+      description: "A story writer who loves to bring the words to the life",
       link: {
-        text: "Read My Cricket Blog",
-        url: "https://your-blog.com/cricket"
+        text: "Read My story Blog",
+        url: "https://storysterme.blogspot.com/"
       },
       details: [
-        "Opening batsman for local club",
-        "5+ years of competitive experience",
-        "Regular weekend practice sessions"
+        "Written many short stories",
+        "Working on many other fiction books",
+        "Loves to attend regular openmic sessions"
       ]
     }
   ];

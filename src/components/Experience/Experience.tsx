@@ -1,4 +1,3 @@
-import React from 'react';
 import Section from '../Section';
 import ExperienceCard from './ExperienceCard';
 import SectionTitle from '../common/SectionTitle';
@@ -8,23 +7,25 @@ const Experience = () => {
     {
       title: 'Software Development Engineer',
       company: 'Verifone',
-      period: '2023 - Present',
+      companyURL:'https://www.verifone.com/en/global',
+      period: '2022 - Present',
       description: [
-        'Led the development of payment processing solutions using Java and Spring Boot',
-        'Implemented secure payment gateway integrations handling over 1M transactions daily',
-        'Collaborated with cross-functional teams to deliver high-quality software solutions',
-        'Optimized database queries resulting in 40% improvement in response time'
+        'Implemented Host Based Product Restrictions feature support of Visa Fleet 2.0 and Wright Express cards on Site Payment Terminal for Payment FEP’s NWS, VAPS, P66 & NBS',
+        'Engineered a new feature to enable transmission of ISO Prefix to Site Level Authorization Loyalty host for Above Site Authorized Mobile payments.',
+        'Built a feature of site terminal to sync time with the payment host for Payment FEP’s VAPS & P66; which reduced nearly 15% of the payment time zone conflicts',
+        'In times as a member of Customer Success Team, collaborated with cross-functional teams to deliver high-quality software solutions with high priority sticking to the short deadlines'
       ]
     },
     {
-      title: 'Software Engineer Intern',
-      company: 'Tech Innovators',
-      period: '2022 - 2023',
+      title: 'Python Developer Intern',
+      company: 'Saathi Global Education Network',
+      companyURL:'https://wellfound.com/company/saathigen',
+      period: '2020 - 2021',
       description: [
-        'Developed and maintained RESTful APIs using Node.js and Express',
-        'Implemented real-time features using WebSocket technology',
-        'Created automated test suites achieving 90% code coverage',
-        'Participated in code reviews and contributed to team best practices'
+        'Fixed email validation bug in ‘forgot password’ functionality.',
+        'Developed prototype of search, wish list and connections feature feasible for MVP1.',
+        'Designed and deployed a robust super admin privilege exchange functionality, complete with real-time history tracking feature, resulting an 25% increase in system accountability in system and 10% increase in client sign ups',
+        'Participated in design discussions and contributed to team\'s best outcomes'
       ]
     }
   ];

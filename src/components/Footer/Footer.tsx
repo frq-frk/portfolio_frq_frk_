@@ -1,10 +1,8 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import Section from '../Section';
 
 const Footer = () => {
   return (
-    <Section className="bg-blue-900 min-h-[50vh]">
+    <div className="w-full flex items-center py-16 bg-blue-900 min-h-[30vh]">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -20,7 +18,7 @@ const Footer = () => {
           </p>
         </motion.div>
       </div>
-    </Section>
+    </div>
   );
 };
 

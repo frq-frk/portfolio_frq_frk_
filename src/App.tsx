@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from './components/Header/Header';
 import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
@@ -9,7 +8,7 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <div className="h-screen overflow-y-scroll snap-y snap-mandatory">
+    <div className="h-screen overflow-y-scroll snap-y snap-proximity">
       <div className="snap-start">
         <Header />
       </div>
@@ -17,10 +16,10 @@ function App() {
         <Projects />
       </div>
       <div className="snap-start">
-        <Experience />
+        <Skills />
       </div>
       <div className="snap-start">
-        <Skills />
+        <Experience />
       </div>
       <div className="snap-start">
         <BeyondWork />
