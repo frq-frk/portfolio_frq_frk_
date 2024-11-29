@@ -1,6 +1,7 @@
 # portfolio_frq_frk_ 
-![FRQ_FRK_](src/Assets/Images/Farooq Mulla.png)
 This is my portfolio web site. It's all about me here... yeah pretty narcissistic right? well let me wishper a secret... that's the plan 😅 JK. Here we go...
+
+<img src="src/Assets/Images/Farooq Mulla.svg" alt="Logo" width="100">
 
 # 👋 Farooq Mohammad Mulla
 
