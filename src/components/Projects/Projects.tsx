@@ -11,8 +11,8 @@ const Projects = () => {
       technologies: ['React', 'Node.js', 'MongoDB', 'Socket.IO'],
       image: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80',
       links: [
-        { type: 'github' as const, url: 'https://github.com/frq-frk/D-Diary-FE', label: 'Frontend' },
-        { type: 'github' as const, url: 'https://github.com/frq-frk/D-Diary-BE', label: 'Backend' }
+        { type: 'github' as const, url: 'https://github.com/frq-frk/D-Diary-FE', label: 'Frontend', liveAvailable: false },
+        { type: 'github' as const, url: 'https://github.com/frq-frk/D-Diary-BE', label: 'Backend', liveAvailable: false }
       ]
     },
     {
@@ -21,10 +21,19 @@ const Projects = () => {
       technologies: ['Spring Boot', 'Docker', 'Redis', 'PostgreSQL'],
       image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80',
       links: [
-        { type: 'github' as const, url: 'https://github.com/frq-frk/compiler-service', label: 'View Project' },
-        { type: 'live' as const, url: 'https://compiler-service-demo.netlify.app', label: 'Live Demo' }
+        { type: 'github' as const, url: 'https://github.com/frq-frk/compiler-service', label: 'View Project', liveAvailable: false },
+        { type: 'live' as const, url: 'https://compiler-service-demo.netlify.app', label: 'Live Demo', liveAvailable: false }
       ]
-    }
+    },
+    {
+      title: 'Zenith-Learn website',
+      description: 'A marketing website designed for the learning management startup company',
+      technologies: ['NextJS', 'Firebase', 'SCSS'],
+      image: 'https://images.unsplash.com/photo-1611131922192-9e1d9f483900?auto=format&fit=crop&w=800&q=80',
+      links: [
+        { type: 'live' as const, url: 'https://zenith-learn.com/', label: 'Live Demo', liveAvailable: true }
+      ]
+    },
   ];
 
   return (

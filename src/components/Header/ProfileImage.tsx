@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import profileImage  from "../../Assets/Images/profileImage.jpg";
 
 const ProfileImage = () => {
   return (
@@ -11,7 +11,7 @@ const ProfileImage = () => {
     >
       <div className="absolute inset-0 bg-blue-500 rounded-full opacity-20 blur-xl" />
       <motion.img
-        src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=800&q=80"
+        src={profileImage}
         alt="Farooq Mulla"
         className="relative w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
         whileHover={{ scale: 1.05 }}

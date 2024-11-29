@@ -1,11 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ExternalLink, Github, Globe } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { ExternalLink, Github, Globe, Info } from "lucide-react";
 
 interface ProjectLink {
-  type: 'github' | 'live';
+  type: "github" | "live";
   url: string;
   label: string;
+  liveAvailable?: boolean; // New flag to indicate whether live demo is available
 }
 
 interface ProjectCardProps {
@@ -23,7 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   technologies,
   links,
   image,
-  delay = 0
+  delay = 0,
 }) => {
   return (
     <motion.div
@@ -41,11 +42,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
       </div>
-      
+
       <div className="p-6">
         <h3 className="text-2xl font-bold text-gray-800 mb-3">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
-        
+
         <div className="flex flex-wrap gap-2 mb-6">
           {technologies.map((tech) => (
             <span
@@ -56,23 +57,48 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </span>
           ))}
         </div>
-        
+
         <div className="flex gap-4">
-          {links.map((link) => (
-            <motion.a
-              key={link.url}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800"
-            >
-              {link.type === 'github' ? <Github size={18} /> : <Globe size={18} />}
-              <span>{link.label}</span>
-              <ExternalLink size={14} />
-            </motion.a>
-          ))}
+          {links.map((link) =>
+            link.type === "live" && link.liveAvailable === false ? (
+              // Render the disabled Live Demo button with tooltip if liveAvailable is false
+              <motion.div
+                key={link.url}
+                className="relative group inline-flex items-center gap-2"
+              >
+                <button
+                  disabled
+                  className="inline-flex items-center gap-2 text-gray-400 cursor-not-allowed"
+                >
+                  <Globe size={18} />
+                  <span>{link.label}</span>
+                  <Info size={14} />
+                </button>
+                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-sm rounded-md px-4 py-2 transition-opacity duration-300">
+                  Project live has been halted due to technical reasons
+                </div>
+              </motion.div>
+            ) : (
+              // Render regular buttons for available live demo or GitHub links
+              <motion.a
+                key={link.url}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800"
+              >
+                {link.type === "github" ? (
+                  <Github size={18} />
+                ) : (
+                  <Globe size={18} />
+                )}
+                <span>{link.label}</span>
+                <ExternalLink size={14} />
+              </motion.a>
+            )
+          )}
         </div>
       </div>
     </motion.div>
