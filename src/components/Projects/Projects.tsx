@@ -1,4 +1,3 @@
-import React from 'react';
 import Section from '../Section';
 import ProjectCard from './ProjectCard';
 import SectionTitle from '../common/SectionTitle';
@@ -22,7 +21,7 @@ const Projects = () => {
       image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80',
       links: [
         { type: 'github' as const, url: 'https://github.com/frq-frk/compiler-service', label: 'View Project', liveAvailable: false },
-        { type: 'live' as const, url: 'https://compiler-service-demo.netlify.app', label: 'Live Demo', liveAvailable: false }
+        { type: 'live' as const, url: 'https://oc-deploy-o5py.onrender.com/', label: 'Live Demo', liveAvailable: true }
       ]
     },
     {
